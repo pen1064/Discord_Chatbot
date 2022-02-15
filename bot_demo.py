@@ -12,8 +12,9 @@ target_channel_id = your_channel_id
 Forbidden_Word = ['crap', 'shit', 'fuck', 'bitch']
 Greetings = ['!hello', 'hello', 'hi', '!hi', 'hey', '!hey']
 client = discord.Client()
-msg_time = '2022-2-15 12:46'#24hrs
+msg_time = '2022-2-15 13:34'#24hrs
 f = '%Y-%m-%d %H:%M'
+msg_content = "This is a scheduled message. Meow! @ " + msg_time
 
 
 @client.event
@@ -56,7 +57,7 @@ async def schedule_msg1():
         current_time = datetime.datetime.strftime(datetime.datetime.now(), f)
         diff = (datetime.datetime.strptime(msg_time, f) - datetime.datetime.strptime(current_time, f)).total_seconds()
         if diff == 0:
-            await message_channel.send("this is a schedule message")
+            await message_channel.send(msg_content)
             await asyncio.sleep(60)
 
 

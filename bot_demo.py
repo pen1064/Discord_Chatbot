@@ -8,7 +8,7 @@ import asyncio
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN2')
-target_channel_id = 779540728941903975
+target_channel_id = your_channel_id
 Forbidden_Word = ['crap', 'shit', 'fuck', 'bitch']
 Greetings = ['!hello', 'hello', 'hi', '!hi', 'hey', '!hey']
 client = discord.Client()
